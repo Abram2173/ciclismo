@@ -1,0 +1,16 @@
+/* App.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Establece el color de fondo blanco */
+    font-family: Arial, sans-serif; /* Define la fuente predeterminada */
+  }
+  
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Establece el alto al 100% del viewport */
+  }
+  

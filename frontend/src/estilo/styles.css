@@ -1,0 +1,191 @@
+
+.form_main {
+  width: 100%;
+  height: 570px;
+  max-width: 400px; /* Ajusta el ancho máximo para que no sea demasiado ancho en pantallas grandes */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+  padding: 60px;
+  background-color: #ffffff;
+  border-radius: 45px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elimina los seudoelementos que crean formas adicionales, ya que pueden ser problemáticos en dispositivos móviles */
+.form_main::before,
+.form_main::after {
+  
+  content: none;
+}
+
+
+.form_main::before {
+  position: absolute;
+  content: "";
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(rgb(8, 255, 255), rgb(99, 236, 1));
+  transform: rotate(45deg);
+  left: -180px;
+  bottom: 10px;
+  z-index: 1;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px rgba(37, 37, 37, 0.758);
+}
+
+.form_main::after {
+  position: absolute;
+  content: "";
+  width: 1800px;
+  height: 570px;
+  background-color: rgba(77, 77, 77, 0.767);
+  transform: rotate(45deg);
+  left: -180px;
+  bottom: 5px;
+  z-index: -0;
+  border-radius: 10px;
+  box-shadow: 10px 15px 50px rgba(0, 0, 0, 0.523); 
+}
+
+
+.heading {
+  font-size: 2em;
+  color: #000000;
+  font-weight: 700;
+  margin: 5px 0 10px 0;
+  position: relative; /* Añadir position: relative para que el z-index funcione */
+  z-index: 2; /* Aumentar el z-index para que el encabezado aparezca por delante */
+}
+
+.inputContainer {
+  width: 110%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.inputField {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid rgb(0, 0, 0);
+  margin: 16px 0;
+  color: black;
+  font-size: .8em;
+  font-weight: 500;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.inputField:focus {
+  outline: none;
+  border-bottom: 2px solid #000000;
+}
+
+.inputField::placeholder {
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.button {
+    width: 100%;
+    height: 40px;
+    background-color: #0dad70; /* Color del botón */
+    border: none;
+    color: #000000;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative; /* Añadir position: relative para que el z-index funcione */
+    z-index: 2;
+  }
+
+  .button2 {
+    width: 100%;
+    height: 40px;
+    background-color: #0dad70;
+    border: none;
+    color: #000000;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+  }
+  
+  .button2:hover {
+    background-color: #c178e9;
+    background-color: aqua;
+  }
+.button:hover {
+  background-color: #c178e9;
+  background-color: aqua;
+}
+
+.forgotLink {
+  font-size: 0.9em;
+  color: #6a0dad;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block; /* Asegura que el enlace olvidado se muestre debajo del botón */
+  position: relative; /* Añadir position: relative para que el z-index funcione */
+  z-index: 1;
+}
+
+.logoContainer {
+  width: 100px; /* Ancho deseado para el contenedor del logo */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  position: relative; /* Añadir position: relative para que el z-index funcione */
+  z-index: 03
+}
+
+.logo {
+  width: 100px; /* Ajusta el tamaño de la imagen al contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  position: relative; /* Añadir position: relative para que el z-index funcione */
+  z-index: 2
+}
+
+
+
+@media screen and (min-width: 801px) {
+  .form_main {
+    width: 400px; /* Mantenemos el ancho máximo para pantallas grandes */
+    margin: 100px auto; /* Centramos el formulario horizontalmente */
+    height: auto; /* Cambiamos la altura a automática para ajustarse al contenido */
+    padding: 80px; /* Incrementamos el padding para un mejor espaciado */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Incrementamos el tamaño de la sombra */
+  }
+
+  .inputField {
+    height: 60px; /* Incrementamos la altura de los campos de entrada */
+    font-size: 1em; /* Incrementamos el tamaño del texto de entrada */
+    padding-left: 40px; /* Incrementamos el espacio para el icono */
+  }
+
+  .button {
+    height: 50px; 
+    font-size: 1.1em;
+  }
+
+  .forgotLink {
+    font-size: 1em;
+  }
+}
